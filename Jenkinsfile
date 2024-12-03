@@ -8,7 +8,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/NAFHIFOUAD/hello-python.git'
+                git branch: 'main', url: 'https://github.com/NAFHIFOUAD/MonProjetJenkins.git'
             }
         }
         stage('Build') {
