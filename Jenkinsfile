@@ -8,22 +8,23 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                echo 'Cloning the repository...'
                 git branch: 'main', url: 'https://github.com/NAFHIFOUAD/MonProjetJenkins.git'
             }
         }
-        stage('Build') {
+        stage('Build and Run') {
             steps {
                 script {
                     if (isUnix()) {
-                        sh 'echo "Running on Unix"'
+                        echo 'Running on Unix-based system'
                         sh 'javac HelloWorld.java'
                         sh 'java HelloWorld'
-                        sh 'python3 hello.py'
+                        sh 'python3 hello_world.py'
                     } else {
-                        bat 'echo "Running on Windows"'
+                        echo 'Running on Windows'
                         bat 'javac HelloWorld.java'
-                        bat 'java HelloWorld.java'
-                        bat 'python hello_word.py'
+                        bat 'java HelloWorld'
+                        bat 'python hello_world.py'
                     }
                 }
             }
