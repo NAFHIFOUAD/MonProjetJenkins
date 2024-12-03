@@ -18,12 +18,12 @@ pipeline {
                         sh 'echo "Running on Unix"'
                         sh 'javac HelloWorld.java'
                         sh 'java HelloWorld'
-                        sh 'python3 hello.py'
+                        sh 'hello_world.py'
                     } else {
                         bat 'echo "Running on Windows"'
                         bat 'javac HelloWorld.java'
                         bat 'java HelloWorld'
-                        bat 'python hello.py'
+                        bat 'python3 hello_world.py'
                     }
                 }
             }
