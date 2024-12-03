@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         JAVA_HOME = 'C:\\Program Files\\Java\\jdk-17'
-        PYTHON_HOME = 'C:\\Users\\User\\Documents\\python313'
+        PYTHON_HOME = 'C:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python313'
         PATH = "${env.PATH};${JAVA_HOME}\\bin;${PYTHON_HOME}"
     }
     stages {
